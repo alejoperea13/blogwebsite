@@ -3,14 +3,26 @@
 
 {% block content %}
 
-<div class="container">
-    <div class="main-container-pages">
-        <header>
-            <h1>{{ user.username}}</h1>
+<div class="main-content-wrapper">
+    <div class="container">
+        <header id="profile-header">
+            <div class="row">
+                <div class="col" align="center">
+                    <img id="img-profile" src="{{ user.profile.image.url }}" alt="" class="rounded-circle account-img">
+                </div>
+            </div>
+            <div class="row" align="center">
+                <div class="col">
+                    <h1>{{ user.username}}</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" align="center">
+                    <p>{{ user.email }}</p>
+                </div>
+            </div>
+
         </header>
     </div>
-
-
 </div>
-
 {% endblock %}

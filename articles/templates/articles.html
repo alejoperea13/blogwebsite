@@ -3,42 +3,45 @@
 
 {% block content %}
 
-<div class="container">
-    <header>
-        <section>
-            <h1>Thousand of members around the world share their experiences </h1>
-        </section>
-    </header>
-    <div class="row">
-        <div class="col-8">
-            {% for post in posts %}
-            <article>
-                <div class="row">
-                    <div class="col">
-                        <h3> {{ post.title }} </h3>
-                        <p class="card-text"><small class="text-muted">By <b>{{ post.author }}</b> • Published on {{ post.date_posted|date:"F d, Y." }}</small></p>
-                        <img id="img_wrapper" src="{% static 'images/banner1.jpeg' %}" alt="">
-                        <section>
-                            <div class="articles_content">
-                                {{ post.content }}
-                            </div>
-                            <a href="#">Read more</a>
-                        </section>
+<div class="main-content-wrapper">
+    <div class="container">
+        <header>
+            <section>
+                <h1>Thousand of members around the world share their experiences </h1>
+            </section>
+        </header>
+        <div class="row">
+            <div class="col-8">
+                {% for post in posts %}
+                <article>
+                    <div class="row">
+                        <div class="col">
+                            <h3> {{ post.title }} </h3>
+                            <p class="card-text"><small class="text-muted">By <b>{{ post.author }}</b> • Published on {{ post.date_posted|date:"F d, Y." }}</small></p>
+                            <img id="img_wrapper" src="{% static 'images/banner1.jpeg' %}" alt="">
+                            <section>
+                                <div class="articles_content">
+                                    {{ post.content }}
+                                </div>
+                                <a href="#">Read more</a>
+                            </section>
+                        </div>
                     </div>
-                </div>
-                <p></p>
-                <p></p>
-            </article>
-            {% endfor %}
-        </div>
-        <div class="col-4">
-            <div class="articles_header">
-                More articles
+                    <p></p>
+                    <p></p>
+                </article>
+                {% endfor %}
             </div>
-            <p>ddfdfdf</p>
+            <div class="col-4">
+                <div class="articles_header">
+                    More articles
+                </div>
+                <p>ddfdfdf</p>
+            </div>
         </div>
-    </div>
 
+    </div>
 </div>
+
 
 {% endblock %}
