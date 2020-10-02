@@ -7,32 +7,31 @@
     <div class="container">
         <header>
             <section>
-                <h1>Thousand of members around the world share their experiences </h1>
+                <h1>Today's Feed </h1>
             </section>
         </header>
         <div class="row">
             <div class="col-8">
                 {% for post in posts %}
-                <article>
+                <div class="article-container">
                     <div class="row">
-                        <div class="class">
+                        <div class="col-1">
                             <img id="img-profile-article" src="{{ post.author.profile.image.url }}" alt="">
                         </div>
-                        <div class="col">
-                            <h3> {{ post.title }} </h3>
-                            <p class="card-text"><small class="text-muted">By <b>{{ post.author }}</b> • Published on {{ post.date_posted|date:"F d, Y." }}</small></p>
-                          
-                            <section>
-                                <div class="articles_content">
-                                    {{ post.content }}
-                                </div>
-                                <a href="#">Read more</a>
-                            </section>
+                        <div class="col-11">
+                            <div id="title-and-caption">
+                                <h5> {{ post.title }} </h5>
+                                <p class="card-text"><small class="text-muted">By <b>{{ post.author }}</b>
+                                    • Published on {{ post.date_posted|date:"F d, Y." }}</small></p>
+                            </div>
+                            <div class="articles_content">
+                                {{ post.content }}
+                            </div>
+                            <a href="#">Read more</a>
+
                         </div>
                     </div>
-                    <p></p>
-                    <p></p>
-                </article>
+                </div>
                 {% endfor %}
             </div>
             <div class="col-4">
