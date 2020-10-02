@@ -214,3 +214,14 @@ footer p {
     object-fit: cover;
     display: inline-block;
 }
+
+/* userprofile styles */
+
+#img-profile-article {
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: inline-block;
+}

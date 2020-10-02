@@ -15,10 +15,13 @@
                 {% for post in posts %}
                 <article>
                     <div class="row">
+                        <div class="class">
+                            <img id="img-profile-article" src="{{ post.author.profile.image.url }}" alt="">
+                        </div>
                         <div class="col">
                             <h3> {{ post.title }} </h3>
                             <p class="card-text"><small class="text-muted">By <b>{{ post.author }}</b> • Published on {{ post.date_posted|date:"F d, Y." }}</small></p>
-                            <img id="img_wrapper" src="{% static 'images/banner1.jpeg' %}" alt="">
+                          
                             <section>
                                 <div class="articles_content">
                                     {{ post.content }}
